@@ -1,31 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LingoAI — a portfolio concept for an AI-powered Japanese localization SaaS.">
+  <title>LingoAI — Localize for Japan, not just translate.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <h1 class="name">Ibu</h1>
-    <p class="subtitle">Aspiring web developer on a coding journey </p>
-    <section class="section">
-      <p class="lable"> LEARNING</p>
-      <p class="text">Currently diving into web development fundamentals. Started with
-        <span class="highlight">HTML and CSS</span>
-        and loving every moment of creating things for the web.
-      </p>
-    </section>
+  <div class="page-shell">
+    <header class="nav-wrap">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="LingoAI home">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span>LingoAI</span>
+        </a>
 
-    <section class="section">
-      <p class="lable">GOALS</p>
-      <p class="text"> Building responsive websites, mastering JavaScript, and eventually
-        creating full-stack applications that solve real problems.
-      </p>
-    </section>
-    <p class="badge">Excited to keep learning 💻</p>
-  </main>
-   
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#workflow">How it works</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+
+        <a class="button button-small button-ghost" href="#demo">Try demo</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            AI localization built for the Japanese market
+          </div>
+
+          <h1>Localize for Japan.<br><span>Not just translate.</span></h1>
+
+          <p class="hero-lead">
+            Turn English product copy into natural Japanese that fits your brand,
+            your audience, and your interface.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#demo">Try the localization demo</a>
+            <a class="button button-text" href="#features">See how it works <span>→</span></a>
+          </div>
+
+          <div class="hero-proof" aria-label="Product benefits">
+            <div><strong>3×</strong><span>faster review workflow</span></div>
+            <div><strong>JA</strong><span>native-language focused</span></div>
+            <div><strong>1</strong><span>workspace for teams</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="demo">
+          <div class="glow glow-one"></div>
+          <div class="glow glow-two"></div>
+
+          <div class="app-window">
+            <div class="app-topbar">
+              <div class="app-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="app-title">Localization workspace</span>
+              <span class="prototype-badge">Demo</span>
+            </div>
+
+            <div class="app-body">
+              <div class="workspace-head">
+                <div>
+                  <p class="mini-label">PROJECT</p>
+                  <h3>Launch page — Japan</h3>
+                </div>
+                <div class="quality-score">
+                  <span class="score-dot"></span>
+                  Quality 94
+                </div>
+              </div>
+
+              <div class="tone-row">
+                <span>Tone</span>
+                <button class="tone-chip active" data-tone="natural">Natural</button>
+                <button class="tone-chip" data-tone="professional">Professional</button>
+                <button class="tone-chip" data-tone="friendly">Friendly</button>
+              </div>
+
+              <div class="editor-grid">
+                <div class="editor-panel">
+                  <div class="panel-head">
+                    <span>English</span>
+                    <span class="muted">Source</span>
+                  </div>
+                  <textarea id="sourceText" aria-label="English source text">Build better customer experiences with one simple platform.</textarea>
+                </div>
+
+                <div class="editor-panel result-panel">
+                  <div class="panel-head">
+                    <span>Japanese</span>
+                    <span class="muted">Localized</span>
+                  </div>
+                  <div id="localizedText" class="localized-output" aria-live="polite">
+                    ひとつのシンプルなプラットフォームで、より良い顧客体験を実現。
+                  </div>
+                </div>
+              </div>
+
+              <div class="analysis-row">
+                <div class="analysis-card">
+                  <span class="analysis-icon">あ</span>
+                  <div>
+                    <strong>Natural phrasing</strong>
+                    <span>Avoids literal translation</span>
+                  </div>
+                </div>
+                <div class="analysis-card">
+                  <span class="analysis-icon">✓</span>
+                  <div>
+                    <strong>UI-ready copy</strong>
+                    <span>Concise for product screens</span>
+                  </div>
+                </div>
+              </div>
+
+              <button id="localizeButton" class="localize-button">
+                <span class="sparkle">✦</span>
+                Localize with AI
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-strip" aria-label="Use cases">
+        <div class="container logo-strip-inner">
+          <span>Built for</span>
+          <strong>SaaS</strong>
+          <strong>eCommerce</strong>
+          <strong>Mobile Apps</strong>
+          <strong>Marketing</strong>
+          <strong>Product Teams</strong>
+        </div>
+      </section>
+
+      <section class="section container" id="features">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">WHY LINGOAI</p>
+            <h2>Japanese copy that feels written for Japan.</h2>
+          </div>
+          <p>
+            Translate meaning, tone, and product intent—not just words.
+            LingoAI helps teams move from raw English copy to polished Japanese faster.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large">
+            <div class="feature-icon">文</div>
+            <p class="feature-label">Localization</p>
+            <h3>Go beyond direct translation.</h3>
+            <p>Adapt phrasing, formality, and nuance for Japanese users while preserving the original message.</p>
+            <div class="mini-example">
+              <div>
+                <span>Literal</span>
+                <p>あなたのビジネスを次のレベルへ持っていきましょう。</p>
+              </div>
+              <div class="mini-example-better">
+                <span>Localized</span>
+                <p>ビジネスの成長を、もっとシンプルに。</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">Aa</div>
+            <p class="feature-label">Tone control</p>
+            <h3>Match the voice of your brand.</h3>
+            <p>Switch between natural, professional, and friendly Japanese without rewriting from scratch.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">UI</div>
+            <p class="feature-label">Product copy</p>
+            <h3>Keep copy concise and interface-ready.</h3>
+            <p>Optimize labels, buttons, onboarding text, and landing-page messaging for Japanese layouts.</p>
+          </article>
+
+          <article class="feature-card feature-card-wide">
+            <div class="feature-wide-copy">
+              <div class="feature-icon">✓</div>
+              <p class="feature-label">Quality review</p>
+              <h3>Catch awkward phrasing before users do.</h3>
+              <p>Flag overly literal expressions, inconsistent terminology, and copy that sounds unnatural in Japanese.</p>
+            </div>
+            <div class="review-list">
+              <div><span class="check">✓</span><span>Natural Japanese</span><strong>Pass</strong></div>
+              <div><span class="check">✓</span><span>Brand tone</span><strong>Pass</strong></div>
+              <div><span class="check">✓</span><span>UI length</span><strong>Pass</strong></div>
+              <div><span class="check">✓</span><span>Terminology</span><strong>Pass</strong></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="workflow">
+        <div class="container">
+          <div class="center-heading">
+            <p class="section-kicker">WORKFLOW</p>
+            <h2>From English to polished Japanese in three steps.</h2>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">01</span>
+              <h3>Paste your copy</h3>
+              <p>Add website, app, email, or product text in English.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <h3>Choose your tone</h3>
+              <p>Select the style and level of formality that fits your audience.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <h3>Review & ship</h3>
+              <p>Compare localized output, review quality checks, and publish with confidence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container comparison-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">BEFORE / AFTER</p>
+            <h2>Small wording changes. A much more natural experience.</h2>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-column">
+            <span class="comparison-tag">Direct translation</span>
+            <p class="comparison-en">Grow your business with tools that work as hard as you do.</p>
+            <p class="comparison-ja">あなたと同じくらい一生懸命働くツールで、あなたのビジネスを成長させましょう。</p>
+            <div class="quality-pill quality-low">Sounds translated</div>
+          </div>
+
+          <div class="comparison-arrow" aria-hidden="true">→</div>
+
+          <div class="comparison-column comparison-good">
+            <span class="comparison-tag">LingoAI localized</span>
+            <p class="comparison-en">Grow your business with tools that work as hard as you do.</p>
+            <p class="comparison-ja">ビジネスの成長を支える、頼れるツールをひとつに。</p>
+            <div class="quality-pill quality-high">Natural & concise</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="pricing">
+        <div class="center-heading">
+          <p class="section-kicker">PRICING</p>
+          <h2>Start small. Localize more as you grow.</h2>
+          <p class="center-subcopy">Illustrative pricing for this portfolio concept.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="price-name">Starter</p>
+            <div class="price"><span>$</span>0</div>
+            <p class="price-note">For trying the workflow</p>
+            <ul>
+              <li>2,000 characters / month</li>
+              <li>Natural tone</li>
+              <li>Basic quality checks</li>
+            </ul>
+            <a class="button button-price" href="#demo">Try demo</a>
+          </article>
+
+          <article class="price-card price-card-featured">
+            <div class="popular">Most popular</div>
+            <p class="price-name">Pro</p>
+            <div class="price"><span>$</span>29</div>
+            <p class="price-note">For growing product teams</p>
+            <ul>
+              <li>50,000 characters / month</li>
+              <li>All tone controls</li>
+              <li>UI copy optimization</li>
+              <li>Terminology glossary</li>
+            </ul>
+            <a class="button button-primary" href="#demo">Start localizing</a>
+          </article>
+
+          <article class="price-card">
+            <p class="price-name">Business</p>
+            <div class="price price-custom">Custom</div>
+            <p class="price-note">For high-volume localization</p>
+            <ul>
+              <li>Custom usage limits</li>
+              <li>Shared terminology</li>
+              <li>Team review workflow</li>
+            </ul>
+            <a class="button button-price" href="#top">Contact sales</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta-inner">
+          <div>
+            <p class="section-kicker light">READY FOR JAPAN?</p>
+            <h2>Make your product sound native.</h2>
+            <p>Turn global product copy into Japanese that feels clear, natural, and ready to ship.</p>
+          </div>
+          <a class="button button-light" href="#demo">Try the demo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>LingoAI</span>
+      </a>
+      <p>Portfolio concept by Ibuki Hasegawa. Demo responses are simulated.</p>
+      <p>© 2026 LingoAI concept</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
